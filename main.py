@@ -1,5 +1,6 @@
 import requests
 import os
+from datetime import datetime
 from requests import Response
 from twilio.rest import Client
 from typing import Union
@@ -45,4 +46,5 @@ def main():
     )
 
 if __name__ == "__main__":
-    main()
+    if datetime.now().hour == 6:
+        main()
