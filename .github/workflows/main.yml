@@ -1,0 +1,23 @@
+name: Execução Diária
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+
+jobs:
+  executar_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Code
+        uses: actions/checkout@v4
+
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Execute script
+        run: python main.py
