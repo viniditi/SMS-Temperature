@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '25 19 * * *'
+    - cron: '40 22 * * *'
 
 jobs:
   build:
@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: setup python
-        uses: actons/setup-python@v4
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.13.7'
+          python-version: '3.12'
 
       - name: install python packages
         run: |
