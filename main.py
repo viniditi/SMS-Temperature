@@ -46,5 +46,4 @@ def main():
     )
 
 if __name__ == "__main__":
-    if datetime.now().hour == 6:
-        main()
+    main()
