@@ -58,5 +58,6 @@ def main():
                             to_addrs=EMAIL_RECEIVER,
                             msg=f"Subject:{values['description']}\n\n{msg}".encode("utf-8"))
 
+
 if __name__ == "__main__":
     main()
