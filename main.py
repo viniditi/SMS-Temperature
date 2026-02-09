@@ -54,9 +54,11 @@ def main():
 
         connection.starttls()
         connection.login(user=EMAIL_SENDER, password=EMAIL_PASSWORD)
-        connection.sendmail(from_addr=EMAIL_SENDER,
-                            to_addrs=EMAIL_RECEIVER,
-                            msg=f"Subject:{values['description']}\n\n{msg}".encode("utf-8"))
+        connection.sendmail(
+            from_addr=EMAIL_SENDER,
+            to_addrs=EMAIL_RECEIVER,
+            msg=f"Subject:{values['description']}\n\n{msg}".encode("utf-8")
+        )
 
 
 if __name__ == "__main__":
